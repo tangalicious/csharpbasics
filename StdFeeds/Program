@@ -1,0 +1,48 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Common.Models;
+using BizServ;
+
+namespace StanFeeds
+{
+    class Program
+    {
+        static void Main(string[] args) // this is a method called "Main" It is called when the program starts
+        {
+            CreateRecord.GreetUser();
+            
+            List<Feed> feeds = new List<Feed>();
+
+            Feed eligibilityFeeds = new Feed
+            {
+                Name = "eligibility"
+                
+            };
+            Feed benefitsRequest = new Feed
+            {
+                Name = "benefitsRequest"
+            }; 
+            Feed benefits = new Feed
+            {
+                Name = "benefits"
+            }; ;
+
+            feeds.Add(eligibilityFeeds);
+            feeds.Add(benefitsRequest);
+            feeds.Add(benefits);
+
+            foreach (var feed in feeds)
+            {
+                Console.WriteLine(feed.Name);
+            }
+            Console.ReadLine();
+        }
+
+       
+       }
+    
+}
+
