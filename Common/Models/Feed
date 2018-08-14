@@ -1,0 +1,29 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Common.Interfaces;
+
+
+namespace Common.Models
+{
+    public class Feed : iFeed
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public string Creator { get; set; }
+        public string BusinessOwner { get; set; }
+        public string ExampleFile { get; set; }
+        public string Type { get; set; }
+        public string Note { get; set; }
+        public bool Active { get; set; }
+        public DateTime CreateDate { get; set; }
+        public DateTime ModifiedDate { get; set; }
+        public string CreatedBy { get; set; }
+        public string ModifiedBy { get; set; }
+        public DateTime ExpirationDate { get; set; }
+        public DateTime Activate { get; set; }
+    }
+}
